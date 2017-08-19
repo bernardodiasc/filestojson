@@ -100,7 +100,7 @@ function write (filename, content) {
 /**
  * Validate configuration
  * @param  {Object} config Configuration object
- * @return {null}        It will just throw error if invalid
+ * @return {null}          It will just throw error if invalid
  */
 function validateConfig (config) {
   const customJoi = Joi.extend((joi) => ({
