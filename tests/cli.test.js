@@ -7,7 +7,7 @@ describe('cli', () => {
   const config = path.resolve(__dirname, 'fixtures', 'config.js')
 
   it('does data generation', (done) => {
-    exec(`babel ${cli} ${config}`, (error, stdout, stderr) => {
+    exec(`${cli} ${config}`, (error, stdout, stderr) => {
       expect(error).toBeNull()
       expect(stderr).toBe('')
       expect(stdout).not.toBe('')
@@ -16,7 +16,7 @@ describe('cli', () => {
   })
 
   it('validate required arguments', (done) => {
-    exec(`babel ${cli}`, (error, stdout, stderr) => {
+    exec(`${cli}`, (error, stdout, stderr) => {
       expect(error).not.toBeNull()
       expect(stdout).not.toBe('')
       expect(stderr).not.toBe('')

@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 /**
  * Static data generator based on static files
  */
