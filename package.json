@@ -1,0 +1,31 @@
+{
+  "name": "memexcms",
+  "version": "1.0.0",
+  "description": "Static data generator based on static files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bernardodiasc/memexcms.git"
+  },
+  "keywords": [
+    "cms",
+    "static-files",
+    "static-database",
+    "nodejs",
+    "json",
+    "javascript",
+    "markdown"
+  ],
+  "author": "Bernardo Dias <bernardodiasdacruz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bernardodiasc/memexcms/issues"
+  },
+  "homepage": "https://github.com/bernardodiasc/memexcms#readme",
+  "bin": {
+    "memexcms": "./cli.js"
+  }
+}
