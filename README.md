@@ -1,20 +1,40 @@
 # filestojson
 
-This script will generarate JSON file with content from file system.
+This script will generarate JSON file from content files.
 
 ## Setup
 
 ```
-$ npm install filestojson --save-dev
+npm install filestojson --save-dev
+```
+
+## Examples
+
+What's the application of this? You may ask.
+
+Check the examples of different front-end stacks loading the data and rendering the page:
+
+```
+npm run examples
+open http://127.0.0.1:8080
 ```
 
 ## How to use
 
+Command line:
+
 ```
-$ filestojson path/to/config.js
+filestojson path/to/config.js
 ```
 
-## Configuration
+Script:
+
+```
+import config from './path/to/config.js'
+filestojson(config)
+```
+
+### Configuration
 
 Please refer to the `tests/fixtures` implementation for further example.
 
@@ -35,8 +55,8 @@ const options = {
   include: ['.md', '.png'],
   exclude: ['README.md'],
   contentTypes: [
-  	{ posts: posts },
-  	{ gallery: gallery },
+  	{ posts },
+  	{ gallery },
   ]
 }
 

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>FilesToJSON - Plain JS example</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      width: 80%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    pre {
+      background: #eee;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+    .page-title,
+    .section-title {
+      text-align: center;
+    }
+    .section-title {
+      margin-bottom: 2rem;
+      text-decoration: underline;
+    }
+    .post-title {
+      color: orange;
+      margin-bottom: 0;
+    }
+    .posts {
+      margin: 0;
+      padding: 0;
+    }
+    .post {
+      margin: 0 0 60px;
+      padding: 0 0 20px;
+      list-style: none;
+    }
+    .image {
+      text-align: center;
+      margin: 0;
+    }
+    .image img {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      border-radius: 1rem 1rem 0 0;
+      display: block;
+    }
+    .headers {
+      font-size: 80%;
+    }
+    .body {
+      background: #fafafa;
+      border-radius: 1rem;
+      border: 1px dotted #e4e4e4;
+    }
+    .content {
+      padding: 1rem;
+    }
+    .content > *:first-child {
+      margin-top: 0;
+    }
+    .content > *:last-child {
+      margin-bottom: 0;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<div>
+  <h1 class="page-title">FilesToJSON - Plain JS example</h1>
+  <div id="app"></div>
+  <script src="../assets/moment.min.js"></script>
+  <script src="../assets/marked.js"></script>
+  <script type="text/javascript">
+    var xmlhttp = new XMLHttpRequest();
+    var app = document.getElementById('app');
+    var render = '';
+
+    function renderApp (data) {
+      if (data.error) {
+        app.classList.add('error');
+        app.innerHTML = data.error;
+      } else {
+        var posts = data.posts;
+        if (posts) {
+          render += `<section id="posts">`;
+          render += `<h2 class="section-title">Posts</h2>`;
+          render += `<ul class="posts">`;
+          for (var property in posts) {
+            if (posts.hasOwnProperty(property)) {
+              var post = posts[property];
+              var poster = data.gallery[post.attr.poster]
+              render += `
+                <li class="post">
+                  <h3 class="post-title">${post.attr.title}</h3>
+                  <p class="headers">
+                    <strong>Date:</strong> ${moment(post.attr.date).format('MMMM Do YYYY')}
+                    <br />
+                    <strong>Tags:</strong> ${post.attr.tags.join(', ')}
+                  </p>
+                  <div class="body">
+                    <p class="image">
+                      <img src="http://lorempixel.com/600/200" alt="${poster.title}" />
+                    </p>
+                    <div class="content">
+                      ${marked(post.body)}
+                    </div>
+                  </div>
+                </li>
+              `;
+            }
+          }
+          render += `</ul>`;
+          render += `</section>`;
+        }
+        app.innerHTML = render;
+      }
+    }
+
+    xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+        if (xmlhttp.status == 200) {
+          renderApp(JSON.parse(xmlhttp.responseText));
+        } else if (xmlhttp.status == 400) {
+          renderApp({ error: 'There was an error 400'});
+        } else {
+          renderApp({ error: 'something else other than 200 was returned'});
+        }
+      }
+    };
+
+    xmlhttp.open("GET", "../data.json", true);
+    xmlhttp.send();
+  </script>
+</body>
+</html>

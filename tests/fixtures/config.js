@@ -10,7 +10,7 @@ import gallery from './content-types/gallery'
  */
 const options = {
   content: path.resolve(__dirname, 'content'),
-  output: path.resolve(__dirname, 'data.json'),
+  output: path.resolve(__dirname, '..', '..', 'examples', 'data.json'),
   include: ['.md', '.png'],
   exclude: ['README.md'],
   contentTypes: [

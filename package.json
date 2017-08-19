@@ -1,12 +1,13 @@
 {
   "name": "filestojson",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Static data generator based on static files",
   "main": "lib/index.js",
   "scripts": {
     "compile": "babel src --out-dir lib",
     "prepublish": "npm run compile",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "examples": "http-server ./examples"
   },
   "repository": {
     "type": "git",
@@ -45,7 +46,7 @@
   },
   "jest": {
     "modulePathIgnorePatterns": [
-      "<rootDir>/tests/fixtures/data.json"
+      "<rootDir>/examples/data.json"
     ]
   }
 }
