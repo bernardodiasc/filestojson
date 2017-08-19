@@ -79,7 +79,10 @@ function translate (content, contentTypes) {
     const base = path.parse(each.file).base
     if (base === 'index.md') {
       const type = each.dir.split('/').pop()
-      output[type] = contentTypes[type] && contentTypes[type](content)
+      const contentTypeTranslation = contentTypes.find(contentType => contentType[type])
+      if (contentTypeTranslation && contentTypeTranslation[type]) {
+        output[type] = contentTypeTranslation[type](content, type)
+      }
     }
   })
   return output
@@ -153,8 +156,8 @@ function filestojson (config = options) {
     content = getData(content, config)
     content = translate(content, config.contentTypes)
     content = write(config.output, content)
-    console.log(`File written on ${config.output}`)
-    console.log(`JSON output: ${content}`)
+    // console.log(`File written on ${config.output}`)
+    // console.log(`JSON output: ${content}`)
     return content
   } catch (e) {
     console.log('Error: ', e)

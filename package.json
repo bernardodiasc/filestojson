@@ -1,6 +1,6 @@
 {
   "name": "filestojson",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Static data generator based on static files",
   "main": "lib/index.js",
   "scripts": {

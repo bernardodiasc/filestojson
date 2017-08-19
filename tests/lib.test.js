@@ -1,6 +1,7 @@
 import fs from 'fs-extra'
 import filestojson from '../src'
 import config from './fixtures/config'
+import expectedData from './fixtures/expected-data.json'
 
 describe('lib', () => {
   it('does data generation', () => {
@@ -8,6 +9,7 @@ describe('lib', () => {
       fs.unlink(config.output)
     }
     filestojson(config)
-    expect(fs.readJSONSync(config.output)).toMatchObject({ gallery: null, posts: null })
+    expect(fs.existsSync(config.output)).toBeTruthy()
+    expect(fs.readJSONSync(config.output)).toMatchObject(expectedData)
   })
 })

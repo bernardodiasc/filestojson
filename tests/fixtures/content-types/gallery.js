@@ -1,10 +1,6 @@
-import path from 'path'
-
-const dataSource = '/medals'
-
-function medals (content) {
+function translation (content, contentType) {
   let output = {}
-  const allFiles = content.filter(each => each.dir.includes(dataSource))
+  const allFiles = content.filter(each => each.dir.includes(`/${contentType}`))
   const index = allFiles.filter(each => each.base === 'index.md')[0]
   index.attr.forEach(each => {
     Object.keys(each).forEach(key => {
@@ -14,4 +10,4 @@ function medals (content) {
   return output
 }
 
-export default medals
+export default translation
