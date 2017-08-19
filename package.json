@@ -1,5 +1,5 @@
 {
-  "name": "memexcms",
+  "name": "filestojson",
   "version": "1.0.0",
   "description": "Static data generator based on static files",
   "main": "lib/index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bernardodiasc/memexcms.git"
+    "url": "git+https://github.com/bernardodiasc/filestojson.git"
   },
   "keywords": [
     "cms",
@@ -24,11 +24,11 @@
   "author": "Bernardo Dias <bernardodiasdacruz@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bernardodiasc/memexcms/issues"
+    "url": "https://github.com/bernardodiasc/filestojson/issues"
   },
-  "homepage": "https://github.com/bernardodiasc/memexcms#readme",
+  "homepage": "https://github.com/bernardodiasc/filestojson#readme",
   "bin": {
-    "memexcms": "./lib/cli.js"
+    "filestojson": "./lib/cli.js"
   },
   "engines": {
     "node": ">=7.6.0"

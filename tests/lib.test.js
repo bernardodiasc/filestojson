@@ -1,5 +1,5 @@
 import fs from 'fs-extra'
-import memexcms from '../src'
+import filestojson from '../src'
 import config from './fixtures/config'
 
 describe('lib', () => {
@@ -7,7 +7,7 @@ describe('lib', () => {
     if (fs.existsSync(config.output)) {
       fs.unlink(config.output)
     }
-    memexcms(config)
+    filestojson(config)
     expect(fs.readJSONSync(config.output)).toMatchObject({ gallery: null, posts: null })
   })
 })

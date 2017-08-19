@@ -146,7 +146,7 @@ function validateConfig (config) {
 /**
  * Run script
  */
-function memexcms (config = options) {
+function filestojson (config = options) {
   try {
     validateConfig(config)
     let content = readDirSync(config.content)
@@ -157,8 +157,8 @@ function memexcms (config = options) {
     console.log(`JSON output: ${content}`)
     return content
   } catch (e) {
-    console.log('SHIT! ', e)
+    console.log('Error: ', e)
   }
 }
 
-export default memexcms
+export default filestojson

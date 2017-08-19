@@ -7,7 +7,7 @@ const [,, ...args] = process.argv
 
 const cli = meow(`
   Usage
-    $ memexcms <config file>
+    $ filestojson <config file>
 `)
 
 if (cli.input.length === 0) {
