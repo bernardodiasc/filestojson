@@ -9,7 +9,7 @@
     "prepublish": "npm run compile",
     "test": "jest --watch --verbose",
     "examples": "http-server ./examples",
-    "deploy": "touch ./nojekyll && gh-pages-deploy",
+    "deploy": "touch ./.nojekyll && gh-pages-deploy",
     "clean-source": "rimraf README.md lib src tests examples .babelrc .editorconfig .gitignore .npmignore LICENSE package.json"
   },
   "repository": {
