@@ -44,7 +44,9 @@ filestojson(config)
 
 Please refer to the `tests/fixtures` implementation for further example.
 
-```
+```js
+// config.js
+
 import path from 'path'
 
 // Content types translations
