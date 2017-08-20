@@ -10,7 +10,7 @@
     "test": "jest --watch --verbose",
     "examples": "http-server ./examples",
     "deploy": "gh-pages-deploy",
-    "clean-source": "rimraf README.md lib src tests"
+    "clean-source": "rimraf README.md lib src tests examples .babelrc .editorconfig .gitignore .npmignore LICENSE package.json"
   },
   "repository": {
     "type": "git",
@@ -59,10 +59,11 @@
     "staticpath": "examples",
     "prep": [
       "compile",
-      "filestojson",
+      "filestojson"
+    ],
+    "post": [
       "clean-source"
     ],
-    "post": [],
     "noprompt": false
   }
 }
