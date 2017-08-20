@@ -6,11 +6,14 @@
   <style>
   body {
     font-family: sans-serif;
-    margin: 3rem;
-    font-size: 2rem;
+    margin: 2rem 3rem;
+    font-size: 1.5rem;
+  }
+  h1 {
+    text-align: center;
   }
   ul {
-    margin: 5rem 0 0;
+    margin: 0 0 3rem;
     padding: 0;
   }
   li {
@@ -21,24 +24,41 @@
   a {
     text-decoration: none;
     display: block;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    color: green;
   }
   a:hover {
-    text-decoration: underline;
-    background: #fbfbfb;
+    background: #f1f1f1;
+  }
+  hr {
+    margin: 3rem 0;
+  }
+  span {
+    float: right;
   }
   </style>
 </head>
 <body>
-  <h1>FilesToJSON examples</h1>
+  <h1>FilesToJSON</h1>
+  <h2>Examples</h2>
   <ul>
-    <li><a href="plainjs">Plain JavaScript</a></li>
-    <li><a href="react">React</a></li>
-    <li><a href="vue">Vue</a></li>
-    <li><a href="pug">Pug</a></li>
-    <li><a href="swig">Swig</a></li>
+    <li><a href="plainjs">Plain JavaScript <span>→</span></a></li>
+    <li><a href="react">React <span>→</span></a></li>
+    <li><a href="vue">Vue <span>→</span></a></li>
+    <li><a href="pug">Pug <span>→</span></a></li>
+    <li><a href="swig">Swig <span>→</span></a></li>
   </ul>
-  <hr />
-  <p><a href="content">Sneak peek content files</a></p>
+  <h2>Content files</h2>
+  <pre><code>├── gallery
+│   ├── baboon.png
+│   ├── boats.png
+│   ├── index.md
+│   └── pnglogo.png
+└── posts
+    ├── 2017-08-17.md
+    ├── 2017-08-18.md
+    ├── 2017-08-19.md
+    └── index.md</code></pre>
 </body>
 </html>

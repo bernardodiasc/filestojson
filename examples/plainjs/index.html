@@ -2,13 +2,28 @@
 <html>
 <head>
   <meta charset="UTF-8"/>
-  <title>FilesToJSON - Plain JS example</title>
+  <title>FilesToJSON - Plain JavaScript example</title>
   <style>
     body {
       font-family: sans-serif;
       width: 80%;
       max-width: 600px;
       margin: 0 auto;
+    }
+    .back {
+      color: #000;
+      text-decoration: none;
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      padding: 0.5rem 1rem 0.5rem 0.7rem;
+      border-radius: 0.2rem;
+    }
+    a:hover {
+      background: #f1f1f1;
+    }
+    h1 {
+      font-size: 3rem;
     }
     pre {
       background: #eee;
@@ -70,7 +85,8 @@
   </style>
 </head>
 <div>
-  <h1 class="page-title">FilesToJSON - Plain JS example</h1>
+  <a href="../" class="back">← All examples</a>
+  <h1 class="page-title">FilesToJSON</h1>
   <div id="app"></div>
   <script src="../assets/moment.min.js"></script>
   <script src="../assets/marked.js"></script>
@@ -87,7 +103,7 @@
         var posts = data.posts;
         if (posts) {
           render += `<section id="posts">`;
-          render += `<h2 class="section-title">Posts</h2>`;
+          render += `<h2 class="section-title">Plain JavaScript example</h2>`;
           render += `<ul class="posts">`;
           for (var property in posts) {
             if (posts.hasOwnProperty(property)) {
