@@ -15,8 +15,8 @@ import Joi from 'joi'
 const options = {
   content: '',
   output: '',
-  include: ['.md', '.png'], // To do: currently accepting file extensions only, need improve this
-  exclude: ['README.md'], // To do: currently accepting base file name with extension only, need improve this
+  include: ['.md', '.png'],
+  exclude: ['README.md'],
   contentTypes: [],
 }
 
@@ -130,14 +130,7 @@ function validateConfig (config) {
     output: Joi.string().required(),
     include: Joi.array().min(1).items(Joi.string()).required(),
     exclude: Joi.array().min(1).items(Joi.string()).required(),
-    contentTypes: Joi.array().min(1).items(
-      Joi.object()
-      // To do: optimize shape definition
-      // Joi.object({
-      //   arg: Joi.string().required(),
-      //   value: Joi.func().required(),
-      // })
-    ).required(),
+    contentTypes: Joi.array().min(1).items(Joi.object()).required(),
   })
   const result = Joi.validate(config, schema, (err, value) => {
     if (err !== null) {

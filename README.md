@@ -8,6 +8,12 @@ This script will generarate JSON file from content files.
 npm install filestojson --save-dev
 ```
 
+Note: you may have to install Babel globaly to be able to use this lib:
+
+```
+npm install -g babel-cli
+```
+
 ## Examples
 
 What's the application of this? You may ask.
@@ -24,7 +30,7 @@ open http://127.0.0.1:8080
 Command line:
 
 ```
-filestojson path/to/config.js
+filestojson ./path/to/config.js
 ```
 
 Script:
