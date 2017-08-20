@@ -17,7 +17,7 @@ if (cli.input.length === 0) {
   process.exit(1)
 }
 
-if (!fs.existsSync(cli.input[0])) {
+if (!fs.existsSync(`${process.cwd()}/${cli.input[0]}`)) {
   console.error('Error: config file not found.')
   cli.showHelp(1)
   process.exit(1)

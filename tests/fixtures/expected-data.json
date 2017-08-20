@@ -1,6 +1,6 @@
-{  
-   "gallery":{  
-      "baboon":{  
+{
+   "gallery":{
+      "baboon":{
          "title":"Pretty Baboon",
          "file":"/gallery/baboon.png",
          "dir":"/gallery",
@@ -10,7 +10,7 @@
          "width":512,
          "height":512
       },
-      "boats":{  
+      "boats":{
          "title":"Grayscale Boats",
          "file":"/gallery/boats.png",
          "dir":"/gallery",
@@ -20,7 +20,7 @@
          "width":512,
          "height":512
       },
-      "pnglogo":{  
+      "pnglogo":{
          "title":"Ugly PNG logo",
          "file":"/gallery/pnglogo.png",
          "dir":"/gallery",
@@ -31,35 +31,35 @@
          "height":192
       }
    },
-   "posts":{  
-      "2017-08-19":{  
+   "posts":{
+      "2017-08-19":{
          "file":"/posts/2017-08-19.md",
          "dir":"/posts",
          "name":"2017-08-19",
          "base":"2017-08-19.md",
          "ext":".md",
-         "attr":{  
+         "attr":{
             "title":"Traveling",
             "date":"2017-08-19T00:00:00.000Z",
-            "tags":[  
+            "tags":[
                "boats",
                "ocean",
                "wood"
             ],
             "poster":"boats"
          },
-         "body":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nobis ipsa quidem at in, nihil incidunt fugiat. Officiis, beatae eveniet, consectetur, voluptatem aperiam similique aspernatur atque ut dolor, quaerat ducimus.\n\n\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum iusto, doloremque sequi vero ut rem adipisci facere id omnis laboriosam quae dolor, nisi nesciunt animi! Ab aperiam nulla, dignissimos ipsa.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eum obcaecati id ratione pariatur sapiente. Adipisci cumque veniam maiores qui molestiae, corporis maxime consequuntur. Praesentium tempora ipsum officiis expedita, sequi commodi."
+         "body":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nobis ipsa quidem at in, nihil incidunt fugiat. Officiis, beatae eveniet, consectetur, voluptatem aperiam similique aspernatur atque ut dolor, quaerat ducimus.\n\n\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n  Voluptatum iusto, doloremque sequi vero ut rem adipisci facere id omnis laboriosam quae dolor, nisi nesciunt animi!\n  Ab aperiam nulla, dignissimos ipsa.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eum obcaecati id ratione pariatur sapiente. Adipisci cumque veniam maiores qui molestiae, corporis maxime consequuntur. Praesentium tempora ipsum officiis expedita, sequi commodi.\n"
       },
-      "2017-08-18":{  
+      "2017-08-18":{
          "file":"/posts/2017-08-18.md",
          "dir":"/posts",
          "name":"2017-08-18",
          "base":"2017-08-18.md",
          "ext":".md",
-         "attr":{  
+         "attr":{
             "title":"Wild animals",
             "date":"2017-08-18T00:00:00.000Z",
-            "tags":[  
+            "tags":[
                "monkey",
                "wild",
                "jungle"
@@ -68,16 +68,16 @@
          },
          "body":"Lorem ipsum dolor sit amet, consectetur [adipisicing](http://aol.com) elit. Facere nobis ipsa quidem at in, nihil incidunt fugiat. Officiis, beatae eveniet, **consectetur**, voluptatem aperiam similique aspernatur atque ut dolor, quaerat ducimus.\n"
       },
-      "2017-08-17":{  
+      "2017-08-17":{
          "file":"/posts/2017-08-17.md",
          "dir":"/posts",
          "name":"2017-08-17",
          "base":"2017-08-17.md",
          "ext":".md",
-         "attr":{  
+         "attr":{
             "title":"PNG Rocks",
             "date":"2017-08-17T00:00:00.000Z",
-            "tags":[  
+            "tags":[
                "images",
                "pictures",
                "quality"

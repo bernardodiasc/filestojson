@@ -42,34 +42,7 @@ filestojson(config)
 
 ### Configuration
 
-Please refer to the `tests/fixtures` implementation for further example.
-
-```js
-// config.js
-
-import path from 'path'
-
-// Content types translations
-import posts from './content-types/posts'
-import gallery from './content-types/gallery'
-
-/**
- * Default options
- * @type {Object}
- */
-const options = {
-  content: path.resolve(__dirname, 'content'),
-  output: path.resolve(__dirname, 'data.json'),
-  include: ['.md', '.png'],
-  exclude: ['README.md'],
-  contentTypes: [
-    { posts },
-    { gallery },
-  ]
-}
-
-export default options
-```
+Please refer to the [examples/config.js](examples/config.js) implementation for further example.
 
 Explaining, the `config` is expected to return an object with the keys:
 

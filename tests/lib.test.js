@@ -1,6 +1,6 @@
 import fs from 'fs-extra'
 import filestojson from '../src'
-import config from './fixtures/config'
+import config from '../examples/config'
 import expectedData from './fixtures/expected-data.json'
 
 describe('lib', () => {

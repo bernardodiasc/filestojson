@@ -149,8 +149,7 @@ function filestojson (config = options) {
     content = getData(content, config)
     content = translate(content, config.contentTypes)
     content = write(config.output, content)
-    // console.log(`File written on ${config.output}`)
-    // console.log(`JSON output: ${content}`)
+    console.log(`File written on ${config.output}`)
     return content
   } catch (e) {
     console.log('Error: ', e)

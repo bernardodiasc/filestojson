@@ -4,13 +4,13 @@ import { exec } from 'child_process'
 
 describe('cli', () => {
   const cli = path.resolve(__dirname, '..', 'src', 'cli.js')
-  const config = path.resolve(__dirname, 'fixtures', 'config.js')
+  const config = 'examples/config.js'
 
   it('does data generation', (done) => {
     exec(`${cli} ${config}`, (error, stdout, stderr) => {
       expect(error).toBeNull()
-      expect(stderr).toBe('')
       expect(stdout).not.toBe('')
+      expect(stderr).toBe('')
       done()
     })
   })
