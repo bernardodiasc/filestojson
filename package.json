@@ -4,12 +4,13 @@
   "description": "Static data generator based on static files",
   "main": "lib/index.js",
   "scripts": {
+    "filestojson": "./lib/cli.js ./examples/config.js",
     "compile": "babel src --out-dir lib",
     "prepublish": "npm run compile",
     "test": "jest --watch --verbose",
     "examples": "http-server ./examples",
     "deploy": "gh-pages-deploy",
-    "clean-source": "rimraf README.md"
+    "clean-source": "rimraf README.md lib src tests"
   },
   "repository": {
     "type": "git",
@@ -53,5 +54,15 @@
     "modulePathIgnorePatterns": [
       "<rootDir>/examples/data.json"
     ]
+  },
+  "gh-pages-deploy": {
+    "staticpath": "examples",
+    "prep": [
+      "compile",
+      "filestojson",
+      "clean-source"
+    ],
+    "post": [],
+    "noprompt": false
   }
 }
