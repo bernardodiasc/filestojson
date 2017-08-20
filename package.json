@@ -8,7 +8,7 @@
     "compile": "babel src --out-dir lib",
     "prepublish": "npm run compile",
     "test": "jest --watch --verbose",
-    "examples": "http-server ./examples",
+    "examples": "http-server ./examples & open http://127.0.0.1:8080",
     "deploy": "touch ./.nojekyll && gh-pages-deploy",
     "clean-source": "rimraf README.md lib src tests examples .babelrc .editorconfig .gitignore .npmignore LICENSE package.json"
   },

@@ -22,7 +22,6 @@ Check the examples of different front-end stacks loading the data and rendering 
 
 ```
 npm run examples
-open http://127.0.0.1:8080
 ```
 
 ## How to use
