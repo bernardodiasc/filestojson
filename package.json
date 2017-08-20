@@ -7,7 +7,9 @@
     "compile": "babel src --out-dir lib",
     "prepublish": "npm run compile",
     "test": "jest --watch --verbose",
-    "examples": "http-server ./examples"
+    "examples": "http-server ./examples",
+    "deploy": "gh-pages-deploy",
+    "clean-source": "rimraf README.md"
   },
   "repository": {
     "type": "git",
@@ -40,10 +42,12 @@
     "babel-preset-env": "^1.6.0",
     "front-matter": "^2.1.2",
     "fs-extra": "^4.0.1",
+    "gh-pages-deploy": "^0.4.2",
     "jest": "^20.0.4",
     "joi": "^10.6.0",
     "meow": "^3.7.0",
-    "png-js": "^0.1.1"
+    "png-js": "^0.1.1",
+    "rimraf": "^2.6.1"
   },
   "jest": {
     "modulePathIgnorePatterns": [
