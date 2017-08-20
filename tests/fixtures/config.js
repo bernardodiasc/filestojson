@@ -14,8 +14,8 @@ const options = {
   include: ['.md', '.png'],
   exclude: ['README.md'],
   contentTypes: [
-  	{ posts },
-  	{ gallery },
+    { posts },
+    { gallery },
   ]
 }
 

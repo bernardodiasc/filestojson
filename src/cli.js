@@ -1,5 +1,6 @@
 #!/usr/bin/env babel-node
 
+import fs from 'fs'
 import meow from 'meow'
 import lib from '.'
 
@@ -16,4 +17,11 @@ if (cli.input.length === 0) {
   process.exit(1)
 }
 
-lib(cli.input[0])
+if (!fs.existsSync(cli.input[0])) {
+  console.error('Error: config file not found.')
+  cli.showHelp(1)
+  process.exit(1)
+}
+
+const config = require(`${process.cwd()}/${cli.input[0]}`).default
+lib(config)

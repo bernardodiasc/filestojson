@@ -20,7 +20,8 @@
     "nodejs",
     "json",
     "javascript",
-    "markdown"
+    "markdown",
+    "frontmatter"
   ],
   "author": "Bernardo Dias <bernardodiasdacruz@gmail.com>",
   "license": "MIT",
