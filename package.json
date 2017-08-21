@@ -1,6 +1,6 @@
 {
   "name": "filestojson",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "Static data generator based on static files",
   "main": "lib/index.js",
   "scripts": {
@@ -38,16 +38,18 @@
   "engines": {
     "node": ">=7.6.0"
   },
-  "devDependencies": {
+  "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "front-matter": "^2.1.2",
     "fs-extra": "^4.0.1",
-    "gh-pages-deploy": "^0.4.2",
-    "jest": "^20.0.4",
     "joi": "^10.6.0",
     "meow": "^3.7.0",
-    "png-js": "^0.1.1",
+    "png-js": "^0.1.1"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "gh-pages-deploy": "^0.4.2",
     "rimraf": "^2.6.1"
   },
   "jest": {
