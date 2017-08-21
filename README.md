@@ -4,13 +4,13 @@ This script will generarate JSON file from content files.
 
 ## Setup
 
-```
+```shel
 npm install filestojson --save-dev
 ```
 
 Note: you may have to install Babel globaly to be able to use this lib:
 
-```
+```shell
 npm install -g babel-cli
 ```
 
@@ -20,7 +20,7 @@ What's the application of this? You may ask.
 
 Check the examples of different front-end stacks loading the data and rendering the page:
 
-```
+```shell
 npm run examples
 ```
 
@@ -28,13 +28,13 @@ npm run examples
 
 Command line:
 
-```
+```shell
 filestojson ./path/to/config.js
 ```
 
 Script:
 
-```
+```js
 import config from './path/to/config.js'
 filestojson(config)
 ```
